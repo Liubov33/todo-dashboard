@@ -4,11 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cb408bd-b880-40ea-9ff0-828b79ff89d1" name="Changes" comment="" />
+    <list default="true" id="9cb408bd-b880-40ea-9ff0-828b79ff89d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Chart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewListPanel/NewListPanel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewListPanel/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewListPanel/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tags/Tags.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tags/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tags/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TaskItem/TaskItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TaskItem/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TaskItem/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TaskList/TaskList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TaskList/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TaskList/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useTasks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/interfaces.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFound.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.old.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,9 +52,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2ttwl2Ozki0nwxQWcBwwAcATeYI" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -33,20 +69,32 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/mac/projects/todo-dashboard",
+    "last_opened_file_path": "/Users/mac/projects/todo-dashboard/src/interfaces",
+    "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/mac/projects/todo-dashboard/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/mac/projects/todo-dashboard/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/interfaces" />
+      <recent name="$PROJECT_DIR$/src/components/TaskList" />
+      <recent name="$PROJECT_DIR$/src/components/TaskItem" />
+      <recent name="$PROJECT_DIR$/src/components/NewListPanel" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/pages/Dashboard" />
+      <recent name="$PROJECT_DIR$/src/components/TaskList" />
+      <recent name="$PROJECT_DIR$/src/components/TaskItem" />
+      <recent name="$PROJECT_DIR$/src/components/NewListPanel" />
+      <recent name="$PROJECT_DIR$/src/components/Tags" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -57,7 +105,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741184825425</updated>
-      <workItem from="1741184826607" duration="5500000" />
+      <workItem from="1741184826607" duration="5471000" />
+      <workItem from="1741193333265" duration="15677000" />
     </task>
     <servers />
   </component>

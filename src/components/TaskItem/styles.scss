@@ -1,0 +1,25 @@
+.task-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  .task-item {
+    display: flex;
+    align-items: center;
+    input {
+      margin-right: 12px;
+    }
+
+    .task-item-text {
+      word-break: break-word;
+      &.completed {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
