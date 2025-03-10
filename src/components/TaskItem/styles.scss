@@ -3,22 +3,49 @@
   flex-direction: column;
   width: 250px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  //border: 1px solid #ccc;
+  //border-radius: 8px;
+  //background-color: #fff;
+  //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
   .task-item {
     display: flex;
     align-items: center;
-    input {
-      margin-right: 12px;
+    gap: 10px;
+
+    input[type=text] {
+      flex: 1;
+      font-size: 1rem;
+      border:none;
+      background-color:transparent;
+      outline: none;
     }
 
     .task-item-text {
+      flex: 1;
       word-break: break-word;
+
+      &:hover {
+        cursor: pointer;
+      }
+
       &.completed {
         text-decoration: line-through;
+      }
+    }
+
+    .delete-icon {
+      cursor: pointer;
+      stroke: #000;
+      transition: stroke 0.2s ease;
+
+      &:hover {
+        width: 18px;
+        height: 18px;
+
+        path {
+          stroke: red;
+        }
       }
     }
   }

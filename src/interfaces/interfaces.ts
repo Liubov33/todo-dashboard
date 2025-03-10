@@ -1,5 +1,6 @@
 export interface Task {
   id: string;
+  groupId: string;
   content: string;
   completed: boolean;
   tags: string[];
@@ -10,5 +11,5 @@ export interface TaskGroup {
 }
 
 export interface Tag {
-  name: string
+  name: string;
 }

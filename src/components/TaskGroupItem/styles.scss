@@ -1,0 +1,15 @@
+.task-group {
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  background-color:#f9f9f9;
+
+  .group-footer {
+    text-align: right;
+    margin-top: 5px;
+
+    .delete-icon {
+      cursor: pointer;
+    }
+  }
+}
