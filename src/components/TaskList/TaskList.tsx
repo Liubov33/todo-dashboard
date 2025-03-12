@@ -6,7 +6,6 @@ import './styles.scss';
 interface TaskListProps {
   tasks: Task[];
   onToggle: (taskId: string) => void;
-  onUpdateTags: (tagId: string, tag: string) => void;
   onDeleteTask: (taskId: string) => void;
   onDeleteGroup: (groupId: string) => void;
   onUpdateContent: (taskId: string, newContent: string) => void;
@@ -15,7 +14,6 @@ interface TaskListProps {
 const TaskList: React.FC<TaskListProps> = ({
   tasks,
   onToggle,
-  onUpdateTags,
   onDeleteTask,
   onDeleteGroup,
   onUpdateContent,
@@ -29,8 +27,6 @@ const TaskList: React.FC<TaskListProps> = ({
     {} as { [key: string]: Task[] },
   );
 
-  console.log('grouped', groupedTasks);
-
   return (
     <div className="task-list">
       {Object.values(groupedTasks).map((group) => (
@@ -38,7 +34,6 @@ const TaskList: React.FC<TaskListProps> = ({
           key={group[0].groupId}
           group={group}
           onToggle={onToggle}
-          onUpdateTags={onUpdateTags}
           onDeleteTask={onDeleteTask}
           onDeleteGroup={onDeleteGroup}
           onUpdateContent={onUpdateContent}

@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../../components/Header';
 import TaskList from '../../components/TaskList';
 import Chart from '../../components/Chart';
 import NewListPanel from '../../components/NewListPanel';
-import { Task } from '../../interfaces/interfaces';
+import useLocalStorage from '../../hooks/useLocalStorage';
 import './styles.scss';
 
+const LOCAL_STORAGE_KEY = 'tasks';
+
 const Dashboard: React.FC = () => {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useLocalStorage(LOCAL_STORAGE_KEY, []);
 
   const handleAddTasks = (lines: string[]) => {
     const groupId = Date.now().toString();
@@ -16,7 +18,6 @@ const Dashboard: React.FC = () => {
       groupId,
       content: line,
       completed: false,
-      tags: [],
     }));
     setTasks((prev) => [...prev, ...newTasks]);
   };
@@ -25,21 +26,6 @@ const Dashboard: React.FC = () => {
     setTasks((prev) =>
       prev.map((task) =>
         task.id === taskId ? { ...task, completed: !task.completed } : task,
-      ),
-    );
-  };
-
-  const handleUpdateTags = (taskId: string, tag: string) => {
-    setTasks((prev) =>
-      prev.map((task) =>
-        task.id === taskId
-          ? {
-              ...task,
-              tags: task.tags.includes(tag)
-                ? task.tags.filter((t) => t !== tag)
-                : [...task.tags, tag],
-            }
-          : task,
       ),
     );
   };
@@ -60,8 +46,6 @@ const Dashboard: React.FC = () => {
     );
   };
 
-  console.log('tasks', tasks);
-
   return (
     <div className="dashboard">
       <Header />
@@ -70,7 +54,6 @@ const Dashboard: React.FC = () => {
         <TaskList
           tasks={tasks}
           onToggle={handleToggleTask}
-          onUpdateTags={handleUpdateTags}
           onDeleteTask={handleDeleteTask}
           onDeleteGroup={handleDeleteGroup}
           onUpdateContent={handleUpdateContent}

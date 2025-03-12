@@ -2,32 +2,30 @@
   display: flex;
   flex-direction: column;
   width: 250px;
-  padding: 10px;
-  //border: 1px solid #ccc;
-  //border-radius: 8px;
-  //background-color: #fff;
-  //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
 
   .task-item {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 10px;
+    line-height: 19px;
 
-    input[type=text] {
+    input[type='checkbox'] {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .task-item-editable-text {
       flex: 1;
-      font-size: 1rem;
-      border:none;
-      background-color:transparent;
       outline: none;
+      word-break: break-word;
+      background-color: #007bff;
     }
 
     .task-item-text {
       flex: 1;
       word-break: break-word;
-
-      &:hover {
-        cursor: pointer;
-      }
 
       &.completed {
         text-decoration: line-through;
@@ -37,15 +35,10 @@
     .delete-icon {
       cursor: pointer;
       stroke: #000;
-      transition: stroke 0.2s ease;
+      transition: transform 0.2s ease;
 
       &:hover {
-        width: 18px;
-        height: 18px;
-
-        path {
-          stroke: red;
-        }
+        transform: scale(1.25);
       }
     }
   }

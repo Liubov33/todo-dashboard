@@ -1,15 +1,36 @@
 .task-group {
-  padding:10px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  background-color:#f9f9f9;
+  position: relative;
+  padding: 10px;
+  max-height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  .task-group-content {
+    max-height: calc(100% - 30px);
+    overflow-y: auto;
+  }
 
   .group-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
     text-align: right;
-    margin-top: 5px;
+    padding: 5px 10px;
+    border-top: 1px solid #ccc;
+    z-index: 1;
 
     .delete-icon {
       cursor: pointer;
+      stroke: #000;
+      transition: stroke 0.2s ease;
+
+      &:hover path {
+        stroke: red;
+      }
     }
   }
 }
