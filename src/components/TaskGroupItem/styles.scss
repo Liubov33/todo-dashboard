@@ -1,6 +1,8 @@
 .task-group {
   position: relative;
   padding: 10px;
+  height: fit-content;
+  min-height: 50px;
   max-height: 300px;
   border: 1px solid #ccc;
   border-radius: 8px;

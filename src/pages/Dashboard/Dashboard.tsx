@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
       completed: false,
       groupColor: '#f9f9f9',
     }));
-    setTasks((prev) => [...prev, ...newTasks]);
+    setTasks((prev) => [...newTasks, ...prev]);
   };
 
   const handleToggleTask = (taskId: string) => {

@@ -1,6 +1,10 @@
 .task-list {
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
-  margin-top:20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
