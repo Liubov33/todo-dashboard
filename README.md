@@ -2,6 +2,10 @@
 
 A responsive web app inspired by Google Keep, Todo Insights Dashboard allows users to create, group, and manage tasks easily. It includes inline editing, color customization for task groups, and persistent storage using localStorage.
 
+## Live Demo
+You can view the live version [here](https://todo-dashboard-pi.vercel.app/)
+
+
 ## Available Scripts
 
 - Inline Task Creation & Grouping:
