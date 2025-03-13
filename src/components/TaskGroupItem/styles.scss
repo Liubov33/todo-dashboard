@@ -4,32 +4,34 @@
   max-height: 300px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f9f9f9;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
 
   .task-group-content {
-    max-height: calc(100% - 30px);
+    max-height: calc(100% - 20px);
     overflow-y: auto;
   }
 
   .group-footer {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     right: 0;
-    background-color: #f9f9f9;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    height: 18px;
     padding: 5px 10px;
-    border-top: 1px solid #ccc;
     z-index: 1;
 
-    .delete-icon {
+    .palette-icon, .delete-icon  {
       cursor: pointer;
-      stroke: #000;
-      transition: stroke 0.2s ease;
+      transition: transform 0.2s ease;
 
-      &:hover path {
-        stroke: red;
+      &:hover {
+        transform: scale(1.125);
       }
     }
   }

@@ -1,14 +1,13 @@
 .task-item-wrapper {
   display: flex;
-  flex-direction: column;
   width: 250px;
   padding: 10px 0;
 
   .task-item {
+    width: 100%;
     display: flex;
     align-items: baseline;
     gap: 10px;
-    line-height: 19px;
 
     input[type='checkbox'] {
       &:hover {
@@ -16,20 +15,18 @@
       }
     }
 
-    .task-item-editable-text {
-      flex: 1;
-      outline: none;
+    .task-item-editable-text,
+    .task-item-text {
+      width: 78%;
       word-break: break-word;
-      background-color: #007bff;
     }
 
-    .task-item-text {
-      flex: 1;
-      word-break: break-word;
+    .task-item-editable-text {
+      outline: none;
+    }
 
-      &.completed {
-        text-decoration: line-through;
-      }
+    .task-item-text.completed {
+      text-decoration: line-through;
     }
 
     .delete-icon {

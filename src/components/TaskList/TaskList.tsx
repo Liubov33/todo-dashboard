@@ -9,6 +9,7 @@ interface TaskListProps {
   onDeleteTask: (taskId: string) => void;
   onDeleteGroup: (groupId: string) => void;
   onUpdateContent: (taskId: string, newContent: string) => void;
+  onChangeBackground: (groupId: string, color: string) => void;
 }
 
 const TaskList: React.FC<TaskListProps> = ({
@@ -17,6 +18,7 @@ const TaskList: React.FC<TaskListProps> = ({
   onDeleteTask,
   onDeleteGroup,
   onUpdateContent,
+  onChangeBackground,
 }) => {
   const groupedTasks = tasks.reduce(
     (groups, task) => {
@@ -37,6 +39,7 @@ const TaskList: React.FC<TaskListProps> = ({
           onDeleteTask={onDeleteTask}
           onDeleteGroup={onDeleteGroup}
           onUpdateContent={onUpdateContent}
+          onChangeBackground={onChangeBackground}
         />
       ))}
     </div>

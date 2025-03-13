@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header';
+import { v4 as uuidv4 } from 'uuid';
 import TaskList from '../../components/TaskList';
 import Chart from '../../components/Chart';
 import NewListPanel from '../../components/NewListPanel';
@@ -12,12 +12,13 @@ const Dashboard: React.FC = () => {
   const [tasks, setTasks] = useLocalStorage(LOCAL_STORAGE_KEY, []);
 
   const handleAddTasks = (lines: string[]) => {
-    const groupId = Date.now().toString();
-    const newTasks = lines.map((line, index) => ({
-      id: `${groupId}-${index}`,
+    const groupId = uuidv4();
+    const newTasks = lines.map((line) => ({
+      id: uuidv4(),
       groupId,
       content: line,
       completed: false,
+      groupColor: '#f9f9f9',
     }));
     setTasks((prev) => [...prev, ...newTasks]);
   };
@@ -46,9 +47,16 @@ const Dashboard: React.FC = () => {
     );
   };
 
+  const handleChangeBackground = (groupId: string, newColor: string) => {
+    setTasks((prev) =>
+      prev.map((task) =>
+        task.groupId === groupId ? { ...task, groupColor: newColor } : task,
+      ),
+    );
+  };
+
   return (
     <div className="dashboard">
-      <Header />
       <div className="dasboard-content">
         <NewListPanel onAddList={handleAddTasks} />
         <TaskList
@@ -57,6 +65,7 @@ const Dashboard: React.FC = () => {
           onDeleteTask={handleDeleteTask}
           onDeleteGroup={handleDeleteGroup}
           onUpdateContent={handleUpdateContent}
+          onChangeBackground={handleChangeBackground}
         />
         <Chart />
       </div>

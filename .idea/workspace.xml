@@ -5,32 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cb408bd-b880-40ea-9ff0-828b79ff89d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Chart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NewListPanel/NewListPanel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NewListPanel/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NewListPanel/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Tags/Tags.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Tags/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Tags/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TaskItem/TaskItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TaskItem/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TaskItem/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TaskList/TaskList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TaskList/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TaskList/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useTasks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/interfaces.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/NotFound.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ColourPalete/ColorPicker.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ColourPalete/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ColourPalete/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/checkmark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/palette.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.old.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewListPanel/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewListPanel/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TaskGroupItem/TaskGroupItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskGroupItem/TaskGroupItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TaskGroupItem/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskGroupItem/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TaskItem/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskItem/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TaskList/TaskList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskList/TaskList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/cross.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/cross.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/mac/projects/todo-dashboard/src/interfaces",
+    "last_opened_file_path": "/Users/mac/projects/todo-dashboard/src/icons",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -77,17 +68,18 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/mac/projects/todo-dashboard/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "ts.external.directory.path": "/Users/mac/projects/todo-dashboard/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/icons" />
+      <recent name="$PROJECT_DIR$/src/components/ColourPalete" />
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/interfaces" />
       <recent name="$PROJECT_DIR$/src/components/TaskList" />
-      <recent name="$PROJECT_DIR$/src/components/TaskItem" />
-      <recent name="$PROJECT_DIR$/src/components/NewListPanel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages/Dashboard" />
@@ -106,7 +98,11 @@
       <option name="presentableId" value="Default" />
       <updated>1741184825425</updated>
       <workItem from="1741184826607" duration="5471000" />
-      <workItem from="1741193333265" duration="15677000" />
+      <workItem from="1741193333265" duration="16274000" />
+      <workItem from="1741464684343" duration="1177000" />
+      <workItem from="1741466338170" duration="21591000" />
+      <workItem from="1741711248216" duration="1478000" />
+      <workItem from="1741720581843" duration="27532000" />
     </task>
     <servers />
   </component>
