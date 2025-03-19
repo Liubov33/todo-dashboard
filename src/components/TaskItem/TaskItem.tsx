@@ -82,6 +82,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
         {hovered && (
           <DeleteIcon
             className="delete-icon"
+            data-testid="delete-icon"
             onClick={() => onDeleteTask(id)}
           />
         )}

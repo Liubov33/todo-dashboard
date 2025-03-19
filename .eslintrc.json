@@ -17,8 +17,22 @@
     },
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react", "prettier"],
-  "rules": {},
+  "plugins": ["@typescript-eslint", "react", "prettier", "import"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ]
+  },
   "settings": {
     "import/resolver": {
       "typescript": {}
