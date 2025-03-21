@@ -102,4 +102,16 @@ describe('TaskItem', () => {
       defaultProps.content,
     );
   });
+
+  test('adds completed class when task is marked as completed', () => {
+    const props = {
+      ...defaultProps,
+      completed: true,
+    };
+
+    render(<TaskItem {...props} />);
+    const taskText = screen.getByText(props.content);
+
+    expect(taskText).toHaveClass('completed');
+  });
 });
