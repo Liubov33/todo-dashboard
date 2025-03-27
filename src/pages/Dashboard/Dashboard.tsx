@@ -1,7 +1,6 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import TaskList from '../../components/TaskList';
-import Chart from '../../components/Chart';
 import NewListPanel from '../../components/NewListPanel';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import './styles.scss';
@@ -67,7 +66,6 @@ const Dashboard: React.FC = () => {
           onUpdateContent={handleUpdateContent}
           onChangeBackground={handleChangeBackground}
         />
-        <Chart />
       </div>
     </div>
   );

@@ -34,20 +34,20 @@ describe('TaskGroupItem', () => {
 
   test('renders all tasks in the group and applies the group background color', () => {
     const { container, getByText } = render(
-      <TaskGroupItem {...defaultProps} />
+      <TaskGroupItem {...defaultProps} />,
     );
 
     defaultProps.group.forEach((task) => {
       expect(getByText(task.content)).toBeInTheDocument();
     });
 
-    expect(container.firstChild).toHaveStyle(`background-color: ${defaultProps.group[0].groupColor}`);
+    expect(container.firstChild).toHaveStyle(
+      `background-color: ${defaultProps.group[0].groupColor}`,
+    );
   });
 
   test('shows group footer (palette and delete icons) on hover', async () => {
-    const { container } = render(
-      <TaskGroupItem {...defaultProps} />
-    );
+    const { container } = render(<TaskGroupItem {...defaultProps} />);
 
     expect(container.querySelector('.palette-icon')).toBeNull();
     expect(container.querySelector('.delete-icon')).toBeNull();
@@ -62,7 +62,7 @@ describe('TaskGroupItem', () => {
 
   test('toggles ColorPicker when palette icon is clicked and calls onChangeBackground when a color is selected', async () => {
     const { container, getByText } = render(
-      <TaskGroupItem {...defaultProps} />
+      <TaskGroupItem {...defaultProps} />,
     );
 
     fireEvent.mouseEnter(container.firstChild as Element);
@@ -77,12 +77,15 @@ describe('TaskGroupItem', () => {
     const colorPicker = container.querySelector('.color-picker-wrapper');
     await waitFor(() => {
       expect(colorPicker).toBeInTheDocument();
-    })
+    });
 
-    const colorOption = (colorPicker!).firstChild as HTMLElement;
+    const colorOption = colorPicker!.firstChild as HTMLElement;
     fireEvent.click(colorOption);
 
-    expect(defaultProps.onChangeBackground).toHaveBeenCalledWith(defaultProps.group[0].groupId, '#F9F9F9');
+    expect(defaultProps.onChangeBackground).toHaveBeenCalledWith(
+      defaultProps.group[0].groupId,
+      '#F9F9F9',
+    );
 
     await waitFor(() => {
       expect(container.querySelector('.color-picker-wrapper')).toBeNull();
@@ -91,7 +94,7 @@ describe('TaskGroupItem', () => {
 
   test('calls onDeleteGroup when delete icon is clicked', async () => {
     const { container, getByText } = render(
-      <TaskGroupItem {...defaultProps} />
+      <TaskGroupItem {...defaultProps} />,
     );
 
     fireEvent.mouseEnter(container.firstChild as Element);
@@ -103,7 +106,9 @@ describe('TaskGroupItem', () => {
     const deleteIcon = container.querySelector('.delete-icon') as HTMLElement;
     fireEvent.click(deleteIcon);
 
-    expect(defaultProps.onDeleteGroup).toHaveBeenCalledWith(defaultProps.group[0].groupId);
+    expect(defaultProps.onDeleteGroup).toHaveBeenCalledWith(
+      defaultProps.group[0].groupId,
+    );
 
     fireEvent.mouseOut(container.firstChild as Element);
     expect(container.querySelector('.delete-icon')).toBeNull();
